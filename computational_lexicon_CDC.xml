@@ -1,0 +1,320 @@
+@prefix ex: <http://example/miolessicodiesempio#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://lexica/mylexicon> .
+
+<!-- INTORNO -->
+ex:intorno_noun a ontolex:LexicalEntry, ontolex:Word ;
+    ontolex:canonicalForm ex:intorno_canonical_form ;
+    lexinfo:partOfSpeech lexinfo:Noun ;
+    ontolex:sense ex:intorno_noun_sense_1, ex:intorno_noun_sense_2 .
+
+ex:intorno_canonical_form a ontolex:Form;
+    ontolex:writtenRep "intorno"@ita.
+
+ex:intorno_adv a ontolex:LexicalEntry, ontolex:Word ;
+    ontolex:canonicalForm ex:intorno_adv_canonical_form ;
+    lexinfo:partOfSpeech lexinfo:Adverb ;
+    ontolex:sense ex:intorno_adv_sense .
+
+ex:intorno_noun_sense_1 a ontolex:LexicalSense ;
+    ontolex:reference <http://www.semanticweb.org/fscio/ontologies/2021/2/untitled-ontology-199#Stative_Location>;
+    skos:definition "Dintorno, luogo circostante"@ita.
+
+ex:intorno_noun_sense_1_otherForm a ontolex:Form ;
+    ontolex:writtenRep "intorni"@ita ;
+    lexinfo:gender lexinfo:masculine ;
+    lexinfo:number lexinfo:plural .
+
+ex:intorno_noun_sense_2 a ontolex:LexicalSense ;
+    ontolex:reference <https://dbpedia.org/describe/?url=http%3A%2F%2Fdbpedia.org%2Fresource%2FNeighbourhood_%28mathematics%29&graph=http%3A%2F%2Fdbpedia.org&invfp=IFP_OFF&sas=SAME_AS_OFF&sid=72080&graph=http%3A%2F%2Fdbpedia.org> ;
+    skos:definition "In matematica, in partic. in topologia, è detto intorno un sottoinsieme associato a un punto dello spazio (astratto) che gode di certe proprietà le quali corrispondono all’idea intuitiva di «vicinanza»;a seconda delle proprietà, lo spazio stesso viene a coincidere con l’uno o l’altro tipo di spazio topologico."@ita .
+
+ontolex:otherForm ex:intorno_noun_sense_2_otherForm;
+    ex:intorno_noun_sense_2_otherForm ontolex:writtenRep "intorni"@ita;
+    lexinfo:gender lexinfo:masculine;
+    lexinfo:number lexinfo:plural.
+
+ex:intorno_adv_sense a ontolex:LexicalSense ;
+    ontolex:reference <http://www.semanticweb.org/fscio/ontologies/2021/2/untitled-ontology-199#Stative_Location>;
+    skos:definition "In giro, in posizione o con movimento pressappoco circolare"@ita.
+    
+<!-- ON THE MOVE -->
+ex:on_the_move a ontolex:LexicalEntry, ontolex:MultiWordExspression ;
+    dct:language <http://id.loc.gov/vocabulary/iso639-2/eng>, <http://lexvo.org/id/iso639-1/en> ;
+    ontolex:canonicalForm ex:on_the_move_canonical_form ;
+    ontolex:otherForm ex:on_the_move_otherForm1, ex:on_the_move_otherForm2 ;
+
+    ontolex:denotes <http://www.semanticweb.org/fscio/ontologies/2021/2/untitled-ontology-199#Change_of_Location> ;
+    decomp:constituent ex:on_component;
+    rdf:_1 ex:on_component;
+    decomp:constituent ex:the_component;
+    rdf:_2 ex:the_component;
+    decomp:constituent ex:move_component;
+    rdf:_3 ex:move_component.
+   
+ex:on_the_move_canonical_form a ontolexForm;
+    ontolex:writtenRep "on the move"@eng ;
+ex:on_the_move_otherForm_1 a ontolexForm;
+    ontolex:writtenRep "on-the-move"@eng ;
+ex:on_the_move_otherForm_2 a ontolexForm;
+    ontolex:writtenRep "la cosa marcha"@esp.
+
+ex:la_cosa_marcha a ontolex:LexicalEntry;
+    dct:language <http://id.loc.gov/vocabulary/iso639-2/es>, <http://lexvo.org/id/iso639-1/es>.
+
+ex:on_the_move vartrans:translatableAs ex:la_cosa_marcha.
+
+ex:on_component a decomp:component;
+    decomp:correspondsTo ex:on_lex;
+
+ex:the_component a decomp:component;
+    decomp:correspondsTo: the_lex;
+
+ex:move_component a decomp:component;
+    decomp:correspondsTo: move_lex.
+    lexinfo:number lexinfo:singular .
+
+
+<!-- TO THE LEFT -->
+ex:to_the_left a ontolex:LexicalEntry, ontolex:MultiWordExpression ;
+    dct:language <http://id.loc.gov/vocabulary/iso639-2/eng>, <http://lexvo.org/id/iso639-1/en> ;
+    ontolex:canonicalForm ex:to_the_left_canonical_form;
+    ontolex:otherForm ex:to_the_left_otherForm1, ex:to_the_left_otherForm2, ex:to_the_left_otherForm3, ex:to_the_left_otherForm4 ;
+    ontolex:denotes <http://www.semanticweb.org/fscio/ontologies/2021/2/untitled-ontology-199#Identificational_State>;
+    decomp:constituent ex:to_component;
+    rdf:_1 ex:to_component;
+    decomp:constituent ex:the_component;
+    rdf:_2 ex:the_component;
+    decomp:constituent ex:left_component;
+    rdf:_3 ex:left_component.
+
+ex:to_the_left_canonical_form a ontolex:Form;   
+    ontolex:writtenRep "to the left"@eng.
+ex:to_the_left_otherForm1 a ontolex:Form;
+    ontolex:writtenRep "to-the-left"@eng.
+ex:to_the_left_otherForm2 a ontolex:Form;
+    ontolex:writtenRep "a sinistra"@ita.
+ex:to_the_left_otherForm3 a ontolex:Form;
+    ontolex:writtenRep "a la izquierda"@spa.
+ex:to_the_left_otherForm4 a ontolex:Form;
+    ontolex:writtenRep "à gauche"@fra.
+
+ex:a_sinistra a ontolex:LexicalEntry;
+    dct:language <http://id.loc.gov/vocabulary/iso639-2/ita>, <http://lexvo.org/id/iso639-3/ita>.
+ex:a_la_izquierda a ontolex:LexicalEntry;
+    dct:language <http://id.loc.gov/vocabulary/iso639-2/spa>, <http://lexvo.org/id/iso639-3/epo>.
+ex:à_gauche a ontolex:LexicalEntry;
+    dct:language <http://id.loc.gov/vocabulary/iso639-2/fra>, <http://lexvo.org/id/iso639-3/fra>.
+
+ex:to_the_left vartrans:translatableAs ex:a_sinistra.
+ex:to_the_left vartrans:translatableAs ex:a_la_izquierda.
+ex:to_the_left vartrans:translatableAs ex:à_gauche.
+
+ex:to_component a decomp:component;
+    decomp:correspondsTo ex:to_lex;
+    lexinfo:partOfSpeech lexinfo:Preposition.
+
+ex:the_component a decomp:component;
+    decomp:correspondsTo ex:the_lex;
+    lexinfo:partOfSpeech lexinfo:Article.
+
+ex:left_component a decomp:component;
+    decomp:correspondsTo ex:left_lex;
+    lexinfo:partOfSpeech lexinfo:Adjective.
+
+
+
+<!-- BENEATH -->
+ex:beneath_adv a ontolex:LexicalEntry, ontolex:Word ;
+    ontolex:canonicalForm ex:beneath_canonical_form;
+    lexinfo:partOfSpeech lexinfo:Adverb;
+    ontolex:sense ex:beneath_adv_sense. 
+
+ex:beneath_canonical_form a ontolex:Form;
+    ontolex:writtenRep "beneath"@eng.
+
+ex:beneath_prep a ontolex:LexicalEntry, ontolex:Word ;
+    ontolex:canonicalForm ex:beneath_prep_canonical_form;
+    lexinfo:partOfSpeech lexinfo:Preposition;
+    ontolex:sense ex:beneath_prep_sense1, ex:beneath_prep_sense2.    
+
+ex:beneath_prep_canonical_form a ontolex:Form;
+    ontolex:writtenRep "beneath"@eng.
+
+ex:beneath_adv_sense a ontolex:LexicalSense ;
+    ontolex:reference http://wordnetweb.princeton.edu/perl/webwn?o2=&o0=&o8=1&o1=&o7=&o5=&o9=&o6=&o3=&o4=&s=below&i=3&h=0000#c ;
+    skos:definition "Her careful make-up hid the signs of age beneath."@eng.
+    
+ex:beneath_prep_sense1 a ontolex:LexicalSense ;
+    ontolex:reference <http://www.semanticweb.org/fscio/ontologies/2021/2/untitled-ontology-199#Stative_Location> ;
+    skos:definition "in or to a lower position than somebody/something; under somebody/something"@eng;
+
+ex:beneath_prep_sense2 a ontolex:LexicalSense ;
+    ontolex:reference <http://www.semanticweb.org/fscio/ontologies/2021/2/untitled-ontology-199#Stative_Location>
+    skos:definition "not good enough for somebody"@eng.
+
+
+
+<!-- ME CAE BIEN-->
+ex:me_cae_bien a ontolex:LexicalEntry, ontolex:MultiWordExpression ;
+    dct:language <http://id.loc.gov/vocabulary/iso639-2/spa>, <http://lexvo.org/id/iso639-3/spa> ;
+    ontolex:canonicalForm ex:me_cae_bien_canonical_form ;
+    ontolex:denotes <http://www.semanticweb.org/fscio/ontologies/2021/2/untitled-ontology-199#Positive_Affection> ;
+    decomp:constituent ex:me_component, ex:cae_component, ex:bien_component ;
+    rdf:_1 ex:me_component ;
+    rdf:_2 ex:cae_component ;
+    rdf:_3 ex:bien_component .
+
+ex:me_cae_bien_canonical_form a ontolex:Form ;
+    ontolex:writtenRep "me cae bien"@spa .
+
+ex:me_component a decomp:Component ;
+    decomp:correspondsTo ex:me_lex ;
+    lexinfo:partOfSpeech lexinfo:Pronoun .
+
+ex:cae_component a decomp:Component ;
+    decomp:correspondsTo ex:caer_lex ;
+    lexinfo:partOfSpeech lexinfo:Verb .
+
+ex:bien_component a decomp:Component ;
+    decomp:correspondsTo ex:bien_lex ;
+    lexinfo:partOfSpeech lexinfo:Adverb .
+
+
+ex:i_like_it a ontolex:LexicalEntry, ontolex:MultiWordExpression ;
+    dct:language <http://id.loc.gov/vocabulary/iso639-2/eng>, <http://lexvo.org/id/iso639-1/en> ;
+
+ex:me_cae_bien vartrans:translatableAs ex:i_like_it .
+
+
+ex:es_auffält_mir a ontolex:LexicalEntry, ontolex:MultiWordExpression ;
+    dct:language <http://id.loc.gov/vocabulary/iso639-2/deu>, <http://lexvo.org/id/iso639-3/deu>.
+
+
+<!-- DI FRONTE A-->
+ ex:di_fronte_a a ontolex:LexicalEntry, ontolex:MultiWordExpression ;
+    dct:language <http://id.loc.gov/vocabulary/iso639-2/ita>, <http://lexvo.org/id/iso639-3/ita> ;
+    ontolex:canonicalForm ex:di_fronte_a_canonical_form ;
+    decomp:constituent ex:di_constituent, ex:fronte_constituent, ex:a_constituent ;
+    rdf:_1 ex:di_component ;
+    rdf:_2 ex:fronte_component ;
+    rdf:_3 ex:a_component .
+
+ex:di_fronte_a_canonical_form a ontolex:Form ;
+    ontolex:writtenRep "di fronte a"@ita .
+
+ex:di_component a decomp:Component ;
+    decomp:correspondsTo ex:di_lex ;
+    lexinfo:partOfSpeech lexinfo:Preposition . 
+
+ex:fronte_component a decomp:Component ;
+    decomp:correspondsTo ex:fronte_lex ;
+    lexinfo:partOfSpeech lexinfo:Noun . 
+
+ex:a_component a decomp:Component ;
+    decomp:correspondsTo ex:a_lex ;
+    lexinfo:partOfSpeech lexinfo:Preposition . 
+
+ex:en_frente_de a ontolex:LexicalEntry, ontolex:MultiWordExpression ;
+    dct:language <http://id.loc.gov/vocabulary/iso639-2/spa>, <http://lexvo.org/id/iso639-3/spa> ;
+
+ex:di_fronte_a vartrans:translatableAs ex:en_frente_de .
+
+
+
+ex:in_front_of a ontolex:LexicalEntry, ontolex:MultiWordExpression ;
+    dct:language <http://id.loc.gov/vocabulary/iso639-2/eng>, <http://lexvo.org/id/iso639-1/en> ;
+
+ex:di_fronte_a vartrans:translatableAs ex:in_front_of .
+
+<!-- AI PIEDI DI-->
+ex:ai_piedi_di a ontolex:LexicalEntry, ontolex:MultiWordExpression ; 
+    dct:language  <http://id.loc.gov/vocabulary/iso639-2/ita>, <http://lexvo.org/id/iso639-3/ita> ;
+    ontolex:canonicalForm ex:ai_piedi_di_canonical_form;
+    decomp:constituent ex:ai_component, ex:piedi_component, ex:di_component ;
+    rdf:_1 ex:ai_component ;
+    rdf:_2 ex:piedi_component ;
+    rdf:_3 ex:di_component .
+
+ex:ai_piedi_di_canonical_form a ontolex:Form ;
+    ontolex:writtenRep "ai piedi di"@ita. 
+
+ex:ai_component a decomp:Component ;
+    decomp:correspondsTo ex:ai_lex ;
+    lexinfo:partOfSpeech lexinfo:Preposition .
+
+ex:piedi_component a decomp:Component ;
+    decomp:correspondsTo ex:piedi_lex ;
+    lexinfo:partOfSpeech lexinfo:Noun . 
+
+ex:di_component a decomp:Component ;
+    decomp:correspondsTo ex:di_lex ;
+    lexinfo:partOfSpeech lexinfo:Preposition .
+
+
+ex:a_los_pies_de a ontolex:LexicalEntry, ontolex:MultiWordExpression ;
+    dct:language <http://id.loc.gov/vocabulary/iso639-2/spa>, <http://lexvo.org/id/iso639-3/spa> ;
+
+ex:ai_piedi_di vartrans:translatableAs ex:a_los_pies_de .
+
+
+ex:aux_piedes_de a ontolex:LexicalEntry, ontolex:MultiWordExpression ;
+    dct:language <http://id.loc.gov/vocabulary/iso639-2/fra>, <http://lexvo.org/id/term/fra/> .
+
+ex:ai_piedi_di vartrans:translatableAs ex:aux_piedes_de .
+
+
+<!--TESTA-->
+ex:testa_noun a ontolex:LexicalEntry, ontolex:Word ;
+    ontolex:canonicalForm ex:testa_canonical_form ; 
+    lexinfo:partOfSpeech lexinfo:Noun ;
+    ontolex:sense ex:testa_noun_sense1, testa_noun_sense2, testa_noun_sense3, testa_noun_sense4, testa_noun_sense5, testa_noun_sense6 ;
+
+ex:testa_canonical_form a ontolex:Form ;
+    ontolex:wrirttenRep "testa"@ita .
+
+ex:testa_noun_sense1 a ontolex:LexicalSense ;
+    ontolex:reference <https://dbpedia.org/ontology/head>
+    skos:definition "Parte del corpo animale in cui si apre la bocca e che contiene il cervello e gli organi di senso specifico; nei vertebrati e nella grande maggioranza degli invertebrati è situata nella parte anteriore del corpo, nell’uomo è il segmento più elevato del corpo, situato al di sopra del collo (è sinon. di capo, ma in varie regioni si usa quasi esclusivam. testa)."@ita.
+
+ontolex:otherForm ex:testa_noun_sense1_otherForm1 ;
+    ex:testa_noun_sense1_otherForm1 ontolex:writtenRep "head"@eng;
+
+ontolex:otherForm ex:testa_noun_sense1_otherForm2 ;
+    ex:testa_noun_sense1_otherForm2 ontolex:writtenRep "cabeza"@spa;
+
+ontolex:otherForm ex:testa_noun_sense1_otherForm3 ;
+    ex:testa_noun_sense1_otherForm3 ontolex:writtenRep "tête"@fra;
+
+ontolex:otherForm ex:testa_noun_sense1_otherForm4 ;
+    ex:testa_noun_sense1_otherForm4 ontolex:writtenRep "Kopf"@deu;
+
+ontolex:otherForm ex:testa_noun_sense1_otherForm5 ;
+    ex:testa_noun_sense1_otherForm5 ontolex:writtenRep "hnùùa"@lao;
+
+ontolex:otherForm ex:testa_noun_sense1_otherForm5 ;
+    ex:testa_noun_sense1_otherForm5 ontolex:writtenRep "omal"@<!-- manca codice della lingua huave -->;
+
+ex:testa_noun_sense2 a ontolex:LexicalSense ;
+    ontolex:reference
+    skos:definition "Molto frequente (e con uso più largo che capo) l’uso fig. della parola, con riferimento alla testa in quanto sede degli organi preposti alle funzioni intellettive e razionali (sinon. quindi di mente, cervello): avere in t. qualche cosa, conoscerla bene o, con altro senso, avere intenzione di farla"@ita.
+
+ex:testa_noun_sense3 a ontolex:LexicalSense ; 
+    ontolex:reference
+    skos:definition "Singolo individuo, persona singola"@ita .
+
+ex:testa_noun_sense4 a ontolex:LexicalSense ; 
+    ontolex:reference
+    skos:definition "La parte iniziale, estrema, di un corpo qualsiasi, di un oggetto, di un elemento, di una superficie, che corrisponde in alcuni casi alla parte superiore in altri a quella anteriore"@ita .
+
+ex:testa_noun_sense5 a ontolex:LexicalSense ; 
+    ontolex:reference
+    skos:definition "fig. Inizio, cioè parte o elemento, punto o momento iniziale"@ita . 
+
+ex:testa_noun_sense6 a ontolex:LexicalSense ;
+    ontolex:reference
+    skos:definition "Nome pugliese di varie specie di pesci del genere Trigla e soprattutto della specie Trigla lineata"@ita . 
